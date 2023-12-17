@@ -1,0 +1,317 @@
+<div class="container">
+  <div fxLayout="row">
+    <div fxLayout="column" fxFlex="20" class="sidebar">
+      <div fxLayout="row" fxLayoutAlign=" start" class="user__details-div">
+        <p-avatar
+          image="https://easydraweverything.com/wp-content/uploads/2019/07/3D-Hexagon-00.png"
+          size="large"
+          shape="circle"
+        ></p-avatar>
+        <span class="bank__name-span">Hexabank</span>
+        <hr>
+      </div>
+      <div fxLayout="row" fxLayoutAlign=" center" class="user__details-div">
+        <p-avatar
+          image="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+          size="large"
+          shape="circle"
+        ></p-avatar>
+        <span class="user__name-span">Akmal Nasmullah</span>
+        <hr>
+      </div>
+      <div class="menu__group-div">
+        <p class="menu__group__title-p">MENU</p>
+        <div class="menu-div">
+          <i class="fa-solid fa-book"></i>
+          <span class="menu__title-span">Overview</span>
+        </div>
+        <div class="menu-div">
+          <i class="fa-solid fa-list"></i>
+          <span class="menu__title-span">Transactions</span>
+        </div>
+        <div class="menu-div">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span class="menu__title-span">Analytics</span>
+        </div>
+        <div class="menu-div">
+          <i class="fa-solid fa-credit-card"></i>
+          <span class="menu__title-span">Cards</span>
+        </div>
+      </div>
+      <div class="menu__group-div">
+        <p class="menu__group__title-p">GENERAL</p>
+        <div class="menu-div">
+          <i class="fa-solid fa-gear"></i>
+          <span class="menu__title-span">Settings</span>
+        </div>
+        <div class="menu-div">
+          <i class="fa-solid fa-question"></i>
+          <span class="menu__title-span">Help/Support</span>
+        </div>
+        <div class="menu-div">
+          <i class="fa-solid fa-moon"></i>
+          <span class="menu__title-span">Dark Mode</span>
+          <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+        </div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center" class="new__payment-div">
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <i class="fa-regular fa-circle-plus new__payent__icon-i"></i>
+        </div>
+        <span class="new__payment__title-span">New Payment</span>
+      </div>
+    </div>
+    <div fxLayout="column" fxFlex="80">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="card">
+        <h4 class="m-0">Overview</h4>
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input class="search-input" type="text" pInputText placeholder="Search something here"/>
+        </span>
+        <div>
+          <button class="mail__icon-button">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+          <button class="bell__icon-button">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div fxLayout="column" fxFlex="30">
+          <div class="card">
+            <div class="my__cards-div">
+              <h4 class="primary-color">My cards</h4>
+              <img src="../assets/images/card.png" class="credit-card" >
+              <button pButton class="add__new__card-button">
+                <i class="fa-solid fa-plus"></i>
+                <span class="ms-2 fw-semibold">
+                  Add New Card
+                </span>
+              </button>
+            </div>
+            <div class="quick__actions-div">
+              <h4 class="primary-color mb-15">Quick Actions</h4>
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="actions-div">
+                <div fxLayout="column" fxLayoutAlign="space-between center">
+                  <i class="fa-regular fa-square-plus primary-color mb-5"></i>
+                  <span class="primary-color">Top up</span>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="space-between center">
+                  <i class="fa-regular fa-paper-plane primary-color mb-5"></i>
+                  <span class="primary-color">Transfer</span>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="space-between center">
+                  <i class="fa-solid fa-money-bill-transfer primary-color mb-5"></i>
+                  <span class="primary-color">Withdrawal</span>
+                </div>
+              </div>
+            </div>
+            <div class="saving__plan-div">
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-15">
+                <h4 class="primary-color">Saving Plan</h4>
+                <i class="fa-regular fa-circle-plus primary-color"></i>
+              </div>
+              <div class="saving__plan__item__details-div">
+                <div fxLayout="column" fxLayoutAlign="space-between none">
+                  <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                      <div class="saving__plan__item__icon-div">
+                        <i class="fa-solid fa-clock"></i>
+                      </div>
+                      <div>
+                        <span class="saving__plan__item__title-span">New Watch</span>
+                        <p class="mb-0 mt-5">Target: $2000</p>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="mt-10">
+                    <p class="primary-color mb-5">Total: $1000</p>
+                    <p-progressBar [value]="50"></p-progressBar>
+                  </div>
+                </div>
+              </div>
+              <div class="saving__plan__item__details-div">
+                <div fxLayout="column" fxLayoutAlign="space-between none">
+                  <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                      <div class="saving__plan__item__icon-div">
+                        <i class="fa-brands fa-playstation"></i>
+                      </div>
+                      <div>
+                        <span class="saving__plan__item__title-span">Play Station 5</span>
+                        <p class="mb-0 mt-5">Target: $2000</p>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="mt-10">
+                    <p class="primary-color mb-5">Total: $500</p>
+                    <p-progressBar [value]="25"></p-progressBar>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column" fxFlex="70">
+          <div fxLayout="row" class="card">
+            <div class="w-100">
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="balance__details-div">
+                <p class="balance__details__title-p">
+                  Total balance
+                </p>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div>
+                <h3 class="fw-bold primary-color mb-10">
+                  ${{accountStatementDetails.balance.total_balance}}
+                </h3>
+              </div>
+              <p-progressBar [value]="accountStatementDetails.balance.payment_done_percentage"></p-progressBar>
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="mt-10">
+                <p>
+                  Monthly payment limit
+                </p>
+                <p>
+                  <span class="primary-color">${{accountStatementDetails.balance.payment_done_so_far}}</span>/${{accountStatementDetails.balance.monthly_payment_limit}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row" class="card">
+            <div class="w-100">
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="balance__details-div">
+                <p class="balance__details__title-p">
+                  Money Statistics
+                </p>
+                <div>
+                  <p-dropdown [options]="viewChartFilterOptions" [(ngModel)]="selectedViewChartFilterOption" [autoDisplayFirst]="false" optionLabel="name" optionValue="name"></p-dropdown>
+                  <i class="fa-solid fa-ellipsis ml-5"></i>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div>
+                  <p class="fw-semibold mb-10">
+                    Total Income
+                  </p>
+                  <h3 class="fw-bold primary-color mb-10">
+                    ${{accountStatementDetails.money_statistics.total_income.value}}
+                  </h3>
+                  <span fxLayout="row">
+                    <span [class]="accountStatementDetails.money_statistics.total_income.trend_color.toLowerCase() + '-color'">
+                      <i class="fa-solid fa-arrow-down"></i>
+                      {{accountStatementDetails.money_statistics.total_income.trend}}%
+                    </span>
+                    <p class="ml-5">from last month</p>
+                  </span>
+                </div>
+                <div>
+                  <p class="fw-semibold mb-10">
+                    Total Expense
+                  </p>
+                  <h3 class="fw-bold primary-color mb-10">
+                    ${{accountStatementDetails.money_statistics.total_expense.value}}
+                  </h3>
+                  <span fxLayout="row">
+                    <span [class]="accountStatementDetails.money_statistics.total_expense.trend_color.toLowerCase() + '-color'">
+                      <i class="fa-solid fa-arrow-up"></i>
+                      {{accountStatementDetails.money_statistics.total_expense.trend}}%
+                    </span>
+                    <p class="ml-5">from last month</p>
+                  </span>
+                </div>
+                <div>
+                  <p class="fw-semibold mb-10">
+                    Total Investment
+                  </p>
+                  <h3 class="fw-bold primary-color mb-10">
+                    ${{accountStatementDetails.money_statistics.total_investment.value}}
+                  </h3>
+                  <span fxLayout="row">
+                    <span [class]="accountStatementDetails.money_statistics.total_investment.trend_color.toLowerCase() + '-color'">
+                      <i class="fa-solid fa-arrow-down"></i>
+                      {{accountStatementDetails.money_statistics.total_investment.trend}}%
+                    </span>
+                    <p class="ml-5">from last month</p>
+                  </span>
+                </div>
+              </div>
+              <div>
+                <p-chart type="bar" [data]="monthlyStatisticsChartData" [options]="monthlyStatisticsChartOptions"></p-chart>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row" class="card">
+            <div class="w-100">
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-10">
+                <h4 class="primary-color">
+                  Transaction History
+                </h4>
+                <div fxLayout="row" fxLayoutAlign="center">
+                  <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input class="transactions__search-input" type="text" pInputText placeholder="Search"/>
+                  </span>
+                  <button class="transactions__header__style-button">
+                    <i class="fa-solid fa-filter"></i>
+                    <span>Filter</span>
+                  </button>
+                  <button class="transactions__header__style-button">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Export</span>
+                  </button>
+                </div>
+              </div>
+              <p-table [value]="accountStatementDetails.transactions" [scrollable]="true" scrollHeight="196px">
+                <ng-template pTemplate="header">
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Type</th>
+                  <th>Time</th>
+                  <th>Amount</th>
+                  <th>Action</th>
+                </ng-template>
+                <ng-template pTemplate="body" let-transaction>
+                  <tr>
+                    <td>
+                      {{transaction.date | date: 'mediumDate'}}
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <p-avatar
+                        image="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                        shape="circle"
+                      ></p-avatar>
+                      <span class="ms-2">{{transaction.name}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span [class]="'transaction-badge status-' + transaction.status.toLowerCase()">
+                        {{transaction.status}}
+                      </span>
+                    </td>
+                    <td>
+                      {{transaction.type}}
+                    </td>
+                    <td>
+                      {{transaction.date | date: 'shortTime'}}
+                    </td>
+                    <td>
+                      {{transaction.amount}}
+                    </td>
+                    <td>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
